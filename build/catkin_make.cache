@@ -1,0 +1,2 @@
+simulation_gazebo:simulation_rviz
+-DCATKIN_DEVEL_PREFIX=/home/himanshu04/rover_space/devel -DCMAKE_INSTALL_PREFIX=/home/himanshu04/rover_space/install -G Unix Makefiles
