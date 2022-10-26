@@ -29,9 +29,9 @@ class armnodeclass:
         # self.rate=rospy.Rate(10)
         self.joint_angles=[0.0,0.0,0.0,0.0,0.0,0.0,0.0]
         # initialize all initial params of arm
-        self.pub_joint_base=rospy.Publisher('base',Float64,queue_size=10)
-        self.pub_joint_shoulder=rospy.Publisher('shoulder',Float64,queue_size=10)
-        self.pub_joint_arm=rospy.Publisher('arm',Float64,queue_size=10)
+        self.pub_joint_base=rospy.Publisher('/manipulator/joint_1_controller/command',Float64,queue_size=10)
+        self.pub_joint_shoulder=rospy.Publisher('/manipulator/joint_2_controller/command',Float64,queue_size=10)
+        self.pub_joint_arm=rospy.Publisher('/manipulator/joint_3_controller/command',Float64,queue_size=10)
         
         self.sub_joy=rospy.Subscriber('joy',Joy,callback=self.updatePos)
         # initialize ar lengths and rest state angles
